@@ -75,7 +75,7 @@ This plugin provides the capability to authenticate via facebook-oauth provider.
             }
             SpringSecurityUtils.loadSecondaryConfig('DefaultOAuth2FacebookConfig')
             if (printStatusMessages) {
-                println("... finished configuring Spring Security facebook Google\n")
+                println("... finished configuring Spring Security facebook\n")
             }
         }
     }
