@@ -75,7 +75,7 @@ This plugin provides the capability to authenticate via facebook-oauth provider.
             }
             SpringSecurityUtils.loadSecondaryConfig('DefaultOAuth2FacebookConfig')
             if (printStatusMessages) {
-                println("... finished configuring Spring Security facebook Google\n")
+                println("... finished configuring Spring Security OAuth2 Facebook\n")
             }
         }
     }
@@ -84,12 +84,12 @@ This plugin provides the capability to authenticate via facebook-oauth provider.
     void doWithApplicationContext() {
         log.trace("doWithApplicationContext")
         def SpringSecurityOauth2BaseService oAuth2BaseService = grailsApplication.mainContext.getBean('springSecurityOauth2BaseService') as SpringSecurityOauth2BaseService
-        def FacebookOAuth2Service googleOAuth2Service = grailsApplication.mainContext.getBean('facebookOAuth2Service') as FacebookOAuth2Service
+        def FacebookOAuth2Service facebookOAuth2Service = grailsApplication.mainContext.getBean('facebookOAuth2Service') as FacebookOAuth2Service
         try {
-            oAuth2BaseService.registerProvider(googleOAuth2Service)
+            oAuth2BaseService.registerProvider(facebookOAuth2Service)
         } catch (OAuth2Exception exception) {
             log.error("There was an oAuth2Exception", exception)
-            log.error("OAuth2 Google not loaded")
+            log.error("OAuth2 Facebook not loaded")
         }
     }
 }
