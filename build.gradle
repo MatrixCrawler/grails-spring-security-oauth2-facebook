@@ -8,7 +8,7 @@ buildscript {
     }
     dependencies {
         classpath "org.grails:grails-gradle-plugin:$grailsVersion"
-        classpath "com.bertramlabs.plugins:asset-pipeline-gradle:2.8.2"
+        classpath "com.bertramlabs.plugins:asset-pipeline-gradle:2.15.1"
     }
 }
 
@@ -20,7 +20,7 @@ def setIfNotSet = { String name, value ->
 setIfNotSet 'issueTrackerUrl', project.vcsUrl + '/issues'
 setIfNotSet 'websiteUrl', project.vcsUrl
 
-version "1.0.0"
+version "1.1.0"
 group = 'org.grails.plugins'
 
 apply plugin:"eclipse"
@@ -50,9 +50,9 @@ dependencyManagement {
 dependencies {
     provided 'javax.servlet:javax.servlet-api:3.1.0'
     provided 'org.grails:grails-dependencies'
-    compile 'org.codehaus.groovy:groovy-all:2.4.3'
-    provided 'org.grails.plugins:spring-security-core:3.+'
-    provided 'org.grails.plugins:spring-security-oauth2:1.1.0'
+    provided 'org.grails.plugins:spring-security-core:3.2.+'
+    provided 'org.grails.plugins:spring-security-oauth2:1.2.0'
+    provided "org.grails:grails-plugin-services"
 
     console "org.grails:grails-console"
 }

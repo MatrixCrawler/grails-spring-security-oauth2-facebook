@@ -7,6 +7,7 @@ import grails.plugin.springsecurity.oauth2.exception.OAuth2Exception
 import grails.plugins.Plugin
 import org.slf4j.LoggerFactory
 
+@Slf4j
 class SpringSecurityOauth2FacebookGrailsPlugin extends Plugin {
 
     // the version or versions of Grails the plugin is designed for
@@ -66,9 +67,9 @@ This plugin provides the capability to authenticate via facebook-oauth provider.
                 return
             }
 
-            if (!hasProperty('log')) {
-                log = LoggerFactory.getLogger(SpringSecurityOauth2FacebookGrailsPlugin)
-            }
+//            if (!hasProperty('log')) {
+//                log = LoggerFactory.getLogger(SpringSecurityOauth2FacebookGrailsPlugin)
+//            }
 
             if (printStatusMessages) {
                 println("Configuring Spring Security OAuth2 facebook plugin...")

@@ -7,7 +7,7 @@ import grails.converters.JSON
 import grails.plugin.springsecurity.oauth2.exception.OAuth2Exception
 import grails.plugin.springsecurity.oauth2.service.OAuth2AbstractProviderService
 import grails.plugin.springsecurity.oauth2.token.OAuth2SpringToken
-import grails.transaction.Transactional
+import grails.gorm.transactions.Transactional
 
 @Transactional
 class FacebookOAuth2Service extends OAuth2AbstractProviderService {
