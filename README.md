@@ -25,7 +25,7 @@ grails:
         springsecurity:
             oauth2:
                 providers:
-                    google:
+                    facebook:
                         api_key: 'facebook-api-key'               #needed
                         api_secret: 'facebook-api-secret'         #needed
                         successUri: "/oauth2/facebook/success"    #optional
